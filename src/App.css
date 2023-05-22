@@ -37,7 +37,7 @@
   }
 }
 
-.font{
+.font {
   font-size: xx-large;
 }
 
@@ -45,6 +45,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
+  /* background-image: linear-gradient(to right, #434343 0%, black 100%); */
 }
 
 .navbar {
@@ -68,17 +69,22 @@ body {
   padding-bottom: 2px;
   margin: 10px;
 }
+.signout {
+  background-color: whitesmoke;
+  border-radius: 5px;
+  font-size: 20px;
+}
 
 .navbar .user {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-right: 50px;
+  cursor: pointer;
 }
 
 .user p {
   font-size: 15px;
-  margin-right: 10px;
   color: white;
 }
 .user img {
@@ -98,38 +104,42 @@ textarea {
   justify-content: center;
 }
 
- form {
-  margin-top: 50px;
-  margin-left: 80vh;
-  /* margin: auto; */
+form {
   padding: 5px 5px;
-  width: 320px;
-  border-radius: 1px;
+  width: 420px;
+  height: 30rem;
+  border-radius: 5px;
   background-color: white;
-  backdrop-filter: blur(5px);
-  background-color: rgb(30, 30, 32);
+  border: 2px solid black;
+  gap: 1rem;
   overflow: hidden;
-  
-} 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 input,
 textarea {
   padding: 8px 5px;
   /* margin: 3px 10px 16px 8px; */
-  background-color: rgba(197, 199, 215, 0.877);
-  border: 0px transparent;
-  border-radius: 5px ;
+  /* background-color: rgba(197, 199, 215, 0.877); */
+  /* border: 0px transparent; */
+  border-radius: 5px;
   color: rgb(0, 0, 0);
   font-size: 16px;
   z-index: 1;
   display: inline-block;
   width: 70%;
   box-sizing: border-box;
+  margin-top: 10px;
 }
-textarea
-{
+textarea {
   width: 80%;
   height: 150px;
+}
+.submitForm {
+  margin-bottom: 30px;
 }
 
 .submitForm:hover {
@@ -138,3 +148,136 @@ textarea
   transform: scale(1.1);
 }
 
+.posts-container {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.post-container {
+  border: solid 2px black;
+  border-radius: 5px;
+  width: 50%;
+  /* background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e); */
+
+  position: relative;
+  overflow: hidden;
+}
+
+.post-container::before {
+  content: "";
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  display: block;
+  width: 100%;
+  height: 15px;
+  /* border-radius: 20px; */
+}
+
+/* .post-container::before
+{
+  
+  content: ' ';
+  position: absolute;
+  height: 500px;
+  width: 10px;
+  background: linear-gradient(#00ccff,#d400d4);
+  animation: animate 4s linear infinite;
+  overflow: hidden;
+  border-radius: 20px;
+  align-items:center;
+  justify-content: center;
+  margin-left: 200px;
+  z-index: inherit;
+} */
+
+/* .post-container::after
+{
+  content: ' ';
+  position: absolute;
+  height: 340px;
+  width: 50px; */
+/* background: linear-gradient(#00ccff,#d400d4);
+  animation: animate 4s linear infinite; */
+/* background-color: #00ccff;
+  overflow: hidden;
+  border-radius: 20px;
+} */
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.title {
+  color: coral;
+  font-size: larger;
+}
+
+/* .title {
+  color: rgb(49, 80, 192);
+  position: relative;
+  z-index: 10;
+ 
+}
+
+.title::after{
+  content: ''; */
+/* background-color: rgb(51, 0, 255); */
+/* background-image: linear-gradient(to right, #434343 0%, black 100%);
+  display: block;
+  width: 510px;
+  height: 15px;
+} */
+
+.description {
+  /* position: relative; */
+  /* z-index: 10; */
+}
+
+/* .description::after {
+  content: "";
+  background-color: rgb(51, 0, 255);
+  background: linear-gradient(#3202f4, #8071a1);
+  display: block;
+  width: 100%;
+  height: 15px;
+} */
+
+.footer {
+  color: white;
+  position: relative;
+  background-color: cornflowerblue;
+  /* z-index: 10; */
+}
+
+/* .footer ::before{
+  content: 'From';
+  color: yellow;
+  font-size: 20px;
+  font-weight: 900;
+} */
+
+.likeButton {
+  border-color: blue;
+  color: #fff;
+  box-shadow: 0 0 7px 2px rgb(134, 134, 183), 0 0 0 0 rgb(243, 252, 4);
+  transition: all 10ms ease-in-out;
+  height: 35px;
+  width: 30px;
+  position: relative;
+  z-index: 10;
+}
+.likeButton:hover {
+  box-shadow: 0 0 10px 0 rgb(14, 231, 61), 0 0 10px 4px rgb(244, 10, 217);
+}
+.headingPost {
+  font-size: 30px;
+}
+.titlePost {
+  color: cornflowerblue;
+}

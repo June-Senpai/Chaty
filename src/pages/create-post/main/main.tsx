@@ -34,7 +34,7 @@ export const Main=()=> {
         getPosts()
     },[])
 
-    return <div> Home Page 
+    return <div className="posts-container"> Home Page 
         {postsList?.map((post=> 
         <Post post={post} /> 
         ))}</div>
