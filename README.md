@@ -1,3 +1,8 @@
+This will be my first ever project I build, react for front end and firebase for backend
+I followed a youtuber's guide to make it, did some changes to css and added functionality.
+
+AFTER LOOKING BACK I SUCKED AT CSS LOL, I am gonna keep this ugly css just to laugh at it.Hope you enjoy too.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
